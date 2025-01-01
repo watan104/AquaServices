@@ -20,13 +20,13 @@ bool NetworkManager::Start()
 void NetworkManager::Poll()
 {
     fmt::detail::color_type color;
-    if (m_name == "EPS") {
+    if (m_name == "SERVER") {
         color = fmt::color::crimson;
     }
-    else if (m_name == "APS") {
+    else if (m_name == "SUBSERVER") {
         color = fmt::color::aqua;
     }
-    else if (m_name == "GrowtopiaOS") {
+    else if (m_name == "LASTSERVER") {
         color = fmt::color::light_yellow;
     }
     if (!m_host) return;

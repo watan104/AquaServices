@@ -153,7 +153,6 @@
     <ClInclude Include="NetAvatar.hpp" />
     <ClInclude Include="NetworkManager.hpp" />
     <ClInclude Include="NetworkPool.hpp" />
-    <ClInclude Include="Peer2Peer.hpp" />
     <ClInclude Include="Packet.hpp" />
     <ClInclude Include="StreamInstance.hpp" />
     <ClInclude Include="StreamInstanceFile.hpp" />

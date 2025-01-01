@@ -80,9 +80,6 @@
     <ClInclude Include="ENetWrapper.hpp">
       <Filter>Src\ENetWrapper</Filter>
     </ClInclude>
-    <ClInclude Include="Peer2Peer.hpp">
-      <Filter>Src\ENetWrapper</Filter>
-    </ClInclude>
     <ClInclude Include="NetAvatar.hpp">
       <Filter>Src\NetAvatar</Filter>
     </ClInclude>
