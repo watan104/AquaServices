@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Src">
+      <UniqueIdentifier>{1624d6d8-81eb-40e7-a0c0-29270e2ff4f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Networking">
+      <UniqueIdentifier>{3d900942-418d-4348-914f-69d4e2e9c5c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Networking\Pool">
+      <UniqueIdentifier>{df517c9d-c538-4443-a878-1e2e7f6c3d57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Networking\WebServer">
+      <UniqueIdentifier>{2a96b213-7b62-4333-8155-f8e7ad3f6119}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\ENetWrapper">
+      <UniqueIdentifier>{1142186e-76cc-40e8-9d87-8801fe060775}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\NetAvatar">
+      <UniqueIdentifier>{9060379a-6a6f-48e5-8fba-b8d2f9d6bb33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\NetAvatar\Utils">
+      <UniqueIdentifier>{458f4478-4ff1-471b-8c30-0322c03321a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\NetAvatar\Pool">
+      <UniqueIdentifier>{dc85d807-6bd7-4e74-931f-b4bd935b9d3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\ProtonSDK">
+      <UniqueIdentifier>{9efffca9-4a64-449c-8e19-ba261d808ab8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Commands">
+      <UniqueIdentifier>{d6c509b0-00ea-4ebe-84cc-d4387ee578b9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkManager.cpp">
+      <Filter>Src\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkPool.cpp">
+      <Filter>Src\Networking\Pool</Filter>
+    </ClCompile>
+    <ClCompile Include="NetAvatar.cpp">
+      <Filter>Src\NetAvatar</Filter>
+    </ClCompile>
+    <ClCompile Include="AvatarPool.cpp">
+      <Filter>Src\NetAvatar\Pool</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NetworkManager.hpp">
+      <Filter>Src\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="NetworkPool.hpp">
+      <Filter>Src\Networking\Pool</Filter>
+    </ClInclude>
+    <ClInclude Include="WebServer.hpp">
+      <Filter>Src\Networking\WebServer</Filter>
+    </ClInclude>
+    <ClInclude Include="ENetWrapper.hpp">
+      <Filter>Src\ENetWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Peer2Peer.hpp">
+      <Filter>Src\ENetWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="NetAvatar.hpp">
+      <Filter>Src\NetAvatar</Filter>
+    </ClInclude>
+    <ClInclude Include="AvatarRoles.hpp">
+      <Filter>Src\NetAvatar\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="AvatarPool.hpp">
+      <Filter>Src\NetAvatar\Pool</Filter>
+    </ClInclude>
+    <ClInclude Include="Packet.hpp">
+      <Filter>Src\ProtonSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="Command.hpp">
+      <Filter>Src\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandContext.hpp">
+      <Filter>Src\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="ApplicationBase.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="Math.hpp">
+      <Filter>Src\ProtonSDK</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
