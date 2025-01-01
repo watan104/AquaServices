@@ -8,6 +8,7 @@
 
 #pragma region Modules
 #include "NetworkPool.hpp"
+#include "ApplicationBase.hpp"
 #pragma endregion
 
 #pragma comment(lib, "Ws2_32.lib")
@@ -17,6 +18,7 @@ auto main() -> int {
 	SetConsoleTitleW(L"Growtopia Server");
 	if (enet_initialize() != 0) return EXIT_FAILURE;
 	NetworkPool g_pool;
+	ApplicationBase* g_app = new ApplicationBase();
 	g_pool.Add("EPS", 17777, 1024);
 	g_pool.Add("APS", 17091, 1024);
 	g_pool.Add("GrowtopiaOS", 16999, 1024);

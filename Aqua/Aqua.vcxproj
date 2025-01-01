@@ -130,10 +130,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AvatarPool.cpp" />
+    <ClCompile Include="FileManager.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MiscUtils.cpp" />
     <ClCompile Include="NetAvatar.cpp" />
     <ClCompile Include="NetworkManager.cpp" />
     <ClCompile Include="NetworkPool.cpp" />
+    <ClCompile Include="StreamInstance.cpp" />
+    <ClCompile Include="StreamInstanceFile.cpp" />
+    <ClCompile Include="TextScanner.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ApplicationBase.hpp" />
@@ -141,14 +146,23 @@
     <ClInclude Include="AvatarRoles.hpp" />
     <ClInclude Include="Command.hpp" />
     <ClInclude Include="CommandContext.hpp" />
+    <ClInclude Include="FileManager.hpp" />
+    <ClInclude Include="FileSystem.hpp" />
     <ClInclude Include="Math.hpp" />
+    <ClInclude Include="MiscUtils.hpp" />
     <ClInclude Include="NetAvatar.hpp" />
     <ClInclude Include="NetworkManager.hpp" />
     <ClInclude Include="NetworkPool.hpp" />
     <ClInclude Include="Peer2Peer.hpp" />
     <ClInclude Include="Packet.hpp" />
+    <ClInclude Include="StreamInstance.hpp" />
+    <ClInclude Include="StreamInstanceFile.hpp" />
+    <ClInclude Include="TextScanner.hpp" />
     <ClInclude Include="WebServer.hpp" />
     <ClInclude Include="ENetWrapper.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CREDITS.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

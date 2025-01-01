@@ -31,6 +31,9 @@
     <Filter Include="Src\Commands">
       <UniqueIdentifier>{d6c509b0-00ea-4ebe-84cc-d4387ee578b9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Src\ProtonSDK\Filesystem">
+      <UniqueIdentifier>{00dba32f-8989-46a3-9923-2eaa52aa017c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -47,6 +50,21 @@
     </ClCompile>
     <ClCompile Include="AvatarPool.cpp">
       <Filter>Src\NetAvatar\Pool</Filter>
+    </ClCompile>
+    <ClCompile Include="StreamInstance.cpp">
+      <Filter>Src\ProtonSDK\Filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="StreamInstanceFile.cpp">
+      <Filter>Src\ProtonSDK\Filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="FileManager.cpp">
+      <Filter>Src\ProtonSDK\Filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="TextScanner.cpp">
+      <Filter>Src\ProtonSDK</Filter>
+    </ClCompile>
+    <ClCompile Include="MiscUtils.cpp">
+      <Filter>Src\ProtonSDK</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -89,5 +107,28 @@
     <ClInclude Include="Math.hpp">
       <Filter>Src\ProtonSDK</Filter>
     </ClInclude>
+    <ClInclude Include="StreamInstance.hpp">
+      <Filter>Src\ProtonSDK\Filesystem</Filter>
+    </ClInclude>
+    <ClInclude Include="StreamInstanceFile.hpp">
+      <Filter>Src\ProtonSDK\Filesystem</Filter>
+    </ClInclude>
+    <ClInclude Include="FileSystem.hpp">
+      <Filter>Src\ProtonSDK\Filesystem</Filter>
+    </ClInclude>
+    <ClInclude Include="FileManager.hpp">
+      <Filter>Src\ProtonSDK\Filesystem</Filter>
+    </ClInclude>
+    <ClInclude Include="TextScanner.hpp">
+      <Filter>Src\ProtonSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="MiscUtils.hpp">
+      <Filter>Src\ProtonSDK</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CREDITS.md">
+      <Filter>Src\ProtonSDK\Filesystem</Filter>
+    </None>
   </ItemGroup>
 </Project>
