@@ -1,0 +1,1 @@
+/*Suanlik burayi kullanmiyorum*/
