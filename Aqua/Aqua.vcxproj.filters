@@ -134,7 +134,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="CREDITS.md">
-      <Filter>Src\ProtonSDK\Filesystem</Filter>
+      <Filter>Src</Filter>
     </None>
   </ItemGroup>
 </Project>
