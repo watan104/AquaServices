@@ -34,6 +34,9 @@
     <Filter Include="Src\ProtonSDK\Filesystem">
       <UniqueIdentifier>{00dba32f-8989-46a3-9923-2eaa52aa017c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Src\NetAvatar\Obj">
+      <UniqueIdentifier>{7c3d7510-d199-4369-a3f6-bc0d6db7f394}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -121,6 +124,12 @@
     </ClInclude>
     <ClInclude Include="MiscUtils.hpp">
       <Filter>Src\ProtonSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="ApplicationConfig.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="AvatarCharState.hpp">
+      <Filter>Src\NetAvatar\Obj</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

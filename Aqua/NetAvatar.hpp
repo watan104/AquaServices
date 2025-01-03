@@ -1,3 +1,6 @@
+#ifndef NETAVATAR_HPP
+#define NETAVATAR_HPP
+
 #include <enet/enet.h>
 #include <string>
 #include <algorithm>
@@ -17,3 +20,5 @@ private:
 	std::string		m_display_name		{ "" };
 	std::string		m_ip				{ "" };
 };
+
+#endif // NETAVATAR_HPP

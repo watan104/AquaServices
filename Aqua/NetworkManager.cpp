@@ -1,4 +1,5 @@
 #include "NetworkManager.hpp"
+#include "NetAvatar.hpp"
 
 bool NetworkManager::Start()
 {
@@ -17,41 +18,36 @@ bool NetworkManager::Start()
     return true;
 }
 
-void NetworkManager::Poll()
+void NetworkManager::Poll(std::deque<std::shared_ptr<NetworkManager>> m_network)
 {
-    fmt::detail::color_type color;
-    if (m_name == "SERVER") {
-        color = fmt::color::crimson;
-    }
-    else if (m_name == "SUBSERVER") {
-        color = fmt::color::aqua;
-    }
-    else if (m_name == "LASTSERVER") {
-        color = fmt::color::light_yellow;
-    }
-    if (!m_host) return;
-    ENetEvent m_event{};
-    while (enet_host_service(m_host, &m_event, 0) > 0) {
-        switch (m_event.type) {
-        case ENET_EVENT_TYPE_NONE:
-        {
-            break;
-        }
-        case ENET_EVENT_TYPE_CONNECT:
-        {
-            fmt::print(fmt::fg(fmt::color::black) | fmt::bg(color) | fmt::emphasis::bold, "[{}] Client connected with {} ID\n", m_name, m_event.peer->connectID);
-            break;
-        }
-        case ENET_EVENT_TYPE_DISCONNECT:
-        {
-            fmt::print(fmt::fg(fmt::color::black) | fmt::bg(color) | fmt::emphasis::bold, "[{}] Client disconnected with {} ID\n", m_name, m_event.peer->connectID);
-            break;
-        }
-        case ENET_EVENT_TYPE_RECEIVE:
-        {
-            fmt::print(fmt::fg(fmt::color::black) | fmt::bg(color) | fmt::emphasis::bold, "[{}] Client received packet with {} ID\n", m_name, m_event.peer->connectID);
-            break;
-        }
+    for (auto& m_server : m_network) {
+
+        if (!m_host) return;
+        ENetEvent m_event{};
+        while (enet_host_service(m_host, &m_event, 0) > 0) {
+            switch (m_event.type) {
+            case ENET_EVENT_TYPE_NONE:
+            {
+                break;
+            }
+            case ENET_EVENT_TYPE_CONNECT:
+            {
+                fmt::print(fmt::fg(fmt::color::black) | fmt::bg(fmt::color::aqua) | fmt::emphasis::bold, "[{}] Client connected with {} ID\n", this->m_port, m_event.peer->connectID);
+                break;
+            }
+            case ENET_EVENT_TYPE_DISCONNECT:
+            {
+                std::shared_ptr<NetAvatar> m_avatar = 
+                { m_server->GetAvatarPool()->Add(m_event.peer) };
+                fmt::print(fmt::fg(fmt::color::black) | fmt::bg(fmt::color::aqua) | fmt::emphasis::bold, "[{}] Client disconnected with {} ID\n", this->m_port, m_event.peer->connectID);
+                break;
+            }
+            case ENET_EVENT_TYPE_RECEIVE:
+            {
+                fmt::print(fmt::fg(fmt::color::black) | fmt::bg(fmt::color::aqua) | fmt::emphasis::bold, "[{}] Client received packet with {} ID\n", this->m_port, m_event.peer->connectID);
+                break;
+            }
+            }
         }
     }
 }
