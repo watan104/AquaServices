@@ -1,10 +1,13 @@
 #pragma region Include
 #include <deque>
 #include "TextScanner.hpp"
+<<<<<<< HEAD
 #include <enet/enet.h>
 #include <fmt/core.h>
 #include "NetworkPool.hpp"
 #include "ApplicationConfig.hpp"
+=======
+>>>>>>> e5098cd4116c508ca18db06fbb7f5088aee4ad42
 #pragma endregion
 
 class ApplicationBase {
@@ -19,7 +22,10 @@ public:
 		g_pool.Add(this->server_name, this->main_port, 1024);
 		g_pool.Add(this->server_name, this->sub_port, 1024);
 		g_pool.Add(this->server_name, this->last_port, 1024);
+<<<<<<< HEAD
 		fmt::print("{}, {}, {}\n", g_app_config.main_port, g_app_config.sub_port, g_app_config.last_port);
+=======
+>>>>>>> e5098cd4116c508ca18db06fbb7f5088aee4ad42
 		while (true) {
 			g_pool.Poll();
 		}
@@ -37,10 +43,13 @@ public:
 		this->database_url = t.GetParmString("database_url", 1).c_str();
 		this->database_pass = t.GetParmString("database_pass", 1).c_str();
 		t.Kill();
+<<<<<<< HEAD
 		g_app_config.main_port = this->main_port;
 		g_app_config.sub_port = this->sub_port;
 		g_app_config.last_port = this->last_port;
 		g_app_config.server_name = this->server_name;
+=======
+>>>>>>> e5098cd4116c508ca18db06fbb7f5088aee4ad42
 		fmt::print(fg(fmt::color::black) | bg(fmt::color::golden_rod), "\"ApplicationBase Class\" ConfigBuilder is completed.\nServer Name:{}, Ports:{}/{}/{}\n", this->server_name, this->main_port, this->sub_port, this->last_port);
 		return true;
 	}	
@@ -73,6 +82,9 @@ private:
 	std::string		dev_github			{ "@watan104" };
 	std::string		dev_github_url		{ "https://github.com/watan104/" };
 	/*About developer*/
+<<<<<<< HEAD
 private:
 	ApplicationConfig g_app_config;
+=======
+>>>>>>> e5098cd4116c508ca18db06fbb7f5088aee4ad42
 };

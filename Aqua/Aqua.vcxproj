@@ -142,8 +142,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ApplicationBase.hpp" />
+<<<<<<< HEAD
     <ClInclude Include="ApplicationConfig.hpp" />
     <ClInclude Include="AvatarCharState.hpp" />
+=======
+>>>>>>> e5098cd4116c508ca18db06fbb7f5088aee4ad42
     <ClInclude Include="AvatarPool.hpp" />
     <ClInclude Include="AvatarRoles.hpp" />
     <ClInclude Include="Command.hpp" />
