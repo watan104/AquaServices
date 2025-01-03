@@ -11,10 +11,6 @@ void NetworkPool::Add(std::string m_name, uint16_t m_port, size_t m_max_peers)
 void NetworkPool::Poll()
 {
     for (auto& m_server : m_servers) {
-<<<<<<< HEAD
         m_server->Poll(m_servers);
-=======
-        m_server->Poll();
->>>>>>> e5098cd4116c508ca18db06fbb7f5088aee4ad42
     }
 }

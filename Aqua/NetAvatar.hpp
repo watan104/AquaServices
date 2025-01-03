@@ -22,10 +22,6 @@ private:
 	std::string		m_raw_name			{ "" };
 	std::string		m_display_name		{ "" };
 	std::string		m_ip				{ "" };
-<<<<<<< HEAD
 };
 
 #endif // NETAVATAR_HPP
-=======
-};
->>>>>>> e5098cd4116c508ca18db06fbb7f5088aee4ad42
