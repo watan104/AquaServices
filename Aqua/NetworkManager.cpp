@@ -33,23 +33,33 @@ void NetworkManager::Poll(std::deque<std::shared_ptr<NetworkManager>> m_network)
             }
             case ENET_EVENT_TYPE_CONNECT:
             {
+                std::shared_ptr<NetAvatar> m_avatar =
+                { m_server->GetAvatarPool()->Add(m_event.peer) };
                 fmt::print(fmt::fg(fmt::color::black) | fmt::bg(fmt::color::aqua) | fmt::emphasis::bold, "[{}] Client connected with {} ID\n", this->m_port, m_event.peer->connectID);
                 break;
             }
             case ENET_EVENT_TYPE_DISCONNECT:
             {
-                std::shared_ptr<NetAvatar> m_avatar =
-                { m_server->GetAvatarPool()->Add(m_event.peer) };
                 fmt::print(fmt::fg(fmt::color::black) | fmt::bg(fmt::color::aqua) | fmt::emphasis::bold, "[{}] Client disconnected with {} ID\n", this->m_port, m_event.peer->connectID);
+				if (not m_event.peer->data) break;
+                std::uint32_t connect_id{};
+                std::copy(reinterpret_cast<std::uint8_t*>(m_event.peer->data), reinterpret_cast<std::uint8_t*>(m_event.peer->data) + sizeof(std::uint32_t), reinterpret_cast<std::uint8_t*>(&connect_id));
+                delete[] m_event.peer->data;
+                m_event.peer->data = NULL;
+                
+                if (not m_server->GetAvatarPool()->Get(connect_id)) return;
+				m_server->GetAvatarPool()->Remove(connect_id);
                 break;
             }
             case ENET_EVENT_TYPE_RECEIVE:
             {
-                fmt::print(fmt::fg(fmt::color::black) | fmt::bg(fmt::color::aqua) | fmt::emphasis::bold, "[{}] Client received packet with {} ID\n", this->m_port, m_event.peer->connectID);
+                std::shared_ptr<NetAvatar> m_avatar =
+                { m_server->GetAvatarPool()->Get(m_event.peer->connectID) };
                 break;
             }
             }
         }
+        enet_host_service(m_server->GetHost(), nullptr, 0);
     }
 }
 

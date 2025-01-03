@@ -10,6 +10,8 @@ public:
 	~AvatarPool() = default;
 
 	std::shared_ptr<NetAvatar> Add(ENetPeer* peer);
+    void Remove(uint32_t connect_id);
+	std::shared_ptr<NetAvatar> Get(uint32_t connect_id);
 	_NODISCARD std::unordered_map<uint32_t, std::shared_ptr<NetAvatar>> const& GetAvatars() const;
 	_NODISCARD std::size_t Count() const;
 	void Clear();

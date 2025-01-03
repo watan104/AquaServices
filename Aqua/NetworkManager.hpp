@@ -15,6 +15,7 @@ public:
     }
     bool Start();
     void Poll(std::deque<std::shared_ptr<NetworkManager>> m_network);
+	_NODISCARD ENetHost* GetHost() const { return m_host; }
 
 	std::shared_ptr<AvatarPool> GetAvatarPool() { return m_avatar; }
 
