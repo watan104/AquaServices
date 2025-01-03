@@ -16,3 +16,23 @@ NetAvatar::~NetAvatar()
 	m_peer->data = nullptr;
 	m_peer = nullptr;
 }
+
+void NetAvatar::SetUserID(const std::uint32_t& uid)
+{
+	m_user_id = uid;
+}
+
+std::uint32_t NetAvatar::GetUserID()
+{
+	return m_user_id;
+}
+
+void NetAvatar::SetConnectID(const std::uint32_t& cid)
+{
+	m_connect_id = cid;
+}
+
+std::uint32_t NetAvatar::GetConnectID() const
+{
+	return m_connect_id;
+}
