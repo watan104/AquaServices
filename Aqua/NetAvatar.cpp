@@ -1,6 +1,8 @@
 #include "NetAvatar.hpp"
 
-NetAvatar::NetAvatar(ENetPeer* peer) : m_peer(peer) 
+NetAvatar::NetAvatar(ENetPeer* peer) : 
+	m_peer(peer),
+	PeerPacket{ peer }
 {
 	if (!m_peer) return;
 	m_peer->data = new uint32_t;

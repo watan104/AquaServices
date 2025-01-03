@@ -69,6 +69,9 @@
     <ClCompile Include="MiscUtils.cpp">
       <Filter>Src\ProtonSDK</Filter>
     </ClCompile>
+    <ClCompile Include="PeerPacket.cpp">
+      <Filter>Src\NetAvatar\Obj</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="NetworkManager.hpp">
@@ -130,6 +133,12 @@
     </ClInclude>
     <ClInclude Include="AvatarCharState.hpp">
       <Filter>Src\NetAvatar\Obj</Filter>
+    </ClInclude>
+    <ClInclude Include="PeerPacket.hpp">
+      <Filter>Src\NetAvatar\Obj</Filter>
+    </ClInclude>
+    <ClInclude Include="Variant.hpp">
+      <Filter>Src\ProtonSDK</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

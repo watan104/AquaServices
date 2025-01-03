@@ -136,6 +136,7 @@
     <ClCompile Include="NetAvatar.cpp" />
     <ClCompile Include="NetworkManager.cpp" />
     <ClCompile Include="NetworkPool.cpp" />
+    <ClCompile Include="PeerPacket.cpp" />
     <ClCompile Include="StreamInstance.cpp" />
     <ClCompile Include="StreamInstanceFile.cpp" />
     <ClCompile Include="TextScanner.cpp" />
@@ -156,9 +157,11 @@
     <ClInclude Include="NetworkManager.hpp" />
     <ClInclude Include="NetworkPool.hpp" />
     <ClInclude Include="Packet.hpp" />
+    <ClInclude Include="PeerPacket.hpp" />
     <ClInclude Include="StreamInstance.hpp" />
     <ClInclude Include="StreamInstanceFile.hpp" />
     <ClInclude Include="TextScanner.hpp" />
+    <ClInclude Include="Variant.hpp" />
     <ClInclude Include="WebServer.hpp" />
     <ClInclude Include="ENetWrapper.hpp" />
   </ItemGroup>

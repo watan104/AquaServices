@@ -36,6 +36,7 @@ void NetworkManager::Poll(std::deque<std::shared_ptr<NetworkManager>> m_network)
                 std::shared_ptr<NetAvatar> m_avatar =
                 { m_server->GetAvatarPool()->Add(m_event.peer) };
                 fmt::print(fmt::fg(fmt::color::black) | fmt::bg(fmt::color::aqua) | fmt::emphasis::bold, "[{}] Client connected with {} ID\n", this->m_port, m_event.peer->connectID);
+                //m_avatar->Send({}, );
                 break;
             }
             case ENET_EVENT_TYPE_DISCONNECT:

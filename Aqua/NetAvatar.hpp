@@ -1,12 +1,12 @@
 #ifndef NETAVATAR_HPP
 #define NETAVATAR_HPP
-
 #include <enet/enet.h>
 #include <string>
 #include <algorithm>
 #include <memory>
+#include "PeerPacket.hpp"
 
-class NetAvatar {
+class NetAvatar : public PeerPacket {
 public:
 	explicit NetAvatar(ENetPeer* peer);
 	~NetAvatar();
