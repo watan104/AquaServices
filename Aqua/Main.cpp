@@ -16,6 +16,8 @@
 #pragma comment(lib, "Winmm.lib")
 #pragma endregion
 
+/*Server*/
+
 ApplicationConfig g_app_config;
 
 auto main() -> int {
