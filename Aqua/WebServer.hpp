@@ -1,1 +1,1 @@
-/*Suanlik burayi kullanmiyorum*/
+/*Suanlik burayi kullanmiyorum - tamam*/

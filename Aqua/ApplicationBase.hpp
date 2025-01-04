@@ -33,8 +33,8 @@ public:
 		this->sub_port = t.GetParmUInt("sub_port", 1);
 		this->last_port = t.GetParmUInt("last_port", 1);
 		this->database_name = t.GetParmString("database_name", 1).c_str();
-		this->database_url = t.GetParmString("database_url", 1).c_str();
 		this->database_pass = t.GetParmString("database_pass", 1).c_str();
+		this->database_port = t.GetParmUInt("database_port", 1);
 		t.Kill();
 		g_app_config.main_port = this->main_port;
 		g_app_config.sub_port = this->sub_port;
@@ -61,8 +61,8 @@ private:
 	std::uint16_t	last_port			{ NULL };
 private:
 	std::string		database_name		{ NULL };
-	std::string		database_url		{ NULL };
-	std::string		database_pass		{ NULL };
+	std::string		database_pass       { NULL };
+	std::uint16_t   database_port		{ NULL }; 
 private:
 	std::string		app_base_path		{ "src/bin/data/" };
 	std::string		app_items_path		{ "src/bin/item/" };
