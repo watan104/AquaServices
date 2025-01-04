@@ -66,7 +66,7 @@ private:
 private:
 	std::string		app_base_path		{ "src/bin/data/" };
 	std::string		app_items_path		{ "src/bin/item/" };
-	std::string		app_log_path			{ "src/bin/log/" };
+	std::string		app_log_path		{ "src/bin/log/" };
 	/*About developer*/
 private:
 	std::string		dev_discord			{ "@watan.1337" };
