@@ -16,7 +16,7 @@
 #pragma comment(lib, "Winmm.lib")
 #pragma endregion
 
-/*Server*/
+/*Server watan amcik*/
 
 ApplicationConfig g_app_config;
 
