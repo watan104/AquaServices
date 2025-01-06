@@ -161,13 +161,13 @@
     <ClInclude Include="MiscUtils.hpp">
       <Filter>Src\ProtonSDK\MiscUtils</Filter>
     </ClInclude>
-    <ClInclude Include="GuestLogon.hpp">
+    <ClInclude Include="GuestLogon.cpp">
       <Filter>Src\Event\Login\Type</Filter>
     </ClInclude>
-    <ClInclude Include="GrowIDLogon.hpp">
+    <ClInclude Include="GrowIDLogon.cpp">
       <Filter>Src\Event\Login\Type</Filter>
     </ClInclude>
-    <ClInclude Include="TokenLogon.hpp">
+    <ClInclude Include="TokenLogon.cpp">
       <Filter>Src\Event\Login\Type</Filter>
     </ClInclude>
   </ItemGroup>

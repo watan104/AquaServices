@@ -152,8 +152,8 @@
     <ClInclude Include="CommandContext.hpp" />
     <ClInclude Include="FileManager.hpp" />
     <ClInclude Include="FileSystem.hpp" />
-    <ClInclude Include="GrowIDLogon.hpp" />
-    <ClInclude Include="GuestLogon.hpp" />
+    <ClInclude Include="GrowIDLogon.cpp" />
+    <ClInclude Include="GuestLogon.cpp" />
     <ClInclude Include="LoginHandler.hpp" />
     <ClInclude Include="Math.hpp" />
     <ClInclude Include="MiscUtils.hpp" />
@@ -165,7 +165,7 @@
     <ClInclude Include="StreamInstance.hpp" />
     <ClInclude Include="StreamInstanceFile.hpp" />
     <ClInclude Include="TextScanner.hpp" />
-    <ClInclude Include="TokenLogon.hpp" />
+    <ClInclude Include="TokenLogon.cpp" />
     <ClInclude Include="Variant.hpp" />
     <ClInclude Include="WebServer.hpp" />
     <ClInclude Include="ENetWrapper.hpp" />

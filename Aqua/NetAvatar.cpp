@@ -37,3 +37,83 @@ std::uint32_t NetAvatar::GetConnectID() const
 {
 	return m_connect_id;
 }
+
+void NetAvatar::SetNetID(const std::uint32_t& nid)
+{
+	m_net_id = nid;
+}
+std::uint32_t NetAvatar::GetNetID() const
+{
+	return m_net_id;
+}
+
+std::string NetAvatar::GetRequestedName()
+{
+	return m_requested_name;
+}
+
+std::string NetAvatar::GetTankIDName()
+{
+	return m_tank_id_name;
+}
+
+std::string NetAvatar::GetTankIDPass()
+{
+	return m_tank_id_pass;
+}
+
+std::string NetAvatar::GetRawName()
+{
+	return m_raw_name;
+}
+
+std::string NetAvatar::GetDisplayName()
+{
+	return m_display_name;
+}
+
+std::string NetAvatar::GetIP()
+{
+	return m_ip;
+}
+
+std::string NetAvatar::GetWorld()
+{
+	return m_world;
+}
+
+std::string NetAvatar::GetPlatformID()
+{
+	return m_platform_id;
+}
+
+float NetAvatar::GetGameVersion()
+{
+	return m_game_version;
+}
+
+std::string NetAvatar::GetCountry()
+{
+	return m_country;
+}
+
+std::string NetAvatar::GetMAC()
+{
+	return m_mac;
+}
+
+std::string NetAvatar::GetRID()
+{
+	return m_rid;
+}
+
+std::string NetAvatar::GetDoorID()
+{
+	return m_door_id;
+}
+
+std::string NetAvatar::GetLogonMode()
+{
+	return m_door_id;
+}
+
