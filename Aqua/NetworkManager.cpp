@@ -1,6 +1,6 @@
 #include "NetworkManager.hpp"
 #include "NetAvatar.hpp"
-
+#include "Packet.hpp"
 
 bool NetworkManager::Start()
 {
@@ -35,7 +35,7 @@ void NetworkManager::Poll(std::deque<std::shared_ptr<NetworkManager>> m_network)
                 {
                     std::shared_ptr<NetAvatar> m_avatar = { m_server->GetAvatarPool()->Add(m_event.peer) };
                     fmt::print(fmt::fg(fmt::color::black) | fmt::bg(fmt::color::aqua) | fmt::emphasis::bold, "[{}] Client connected with {} ID\n", this->m_port, m_event.peer->connectID);
-                    //m_avatar->Send({}, );
+                    m_avatar->Send({ NET_MESSAGE_SERVER_HELLO }, sizeof(TankUpdatePacket));
                     break;
                 }
                 case ENET_EVENT_TYPE_DISCONNECT:
@@ -45,8 +45,7 @@ void NetworkManager::Poll(std::deque<std::shared_ptr<NetworkManager>> m_network)
                     std::uint32_t connect_id{};
                     std::copy(reinterpret_cast<std::uint8_t*>(m_event.peer->data), reinterpret_cast<std::uint8_t*>(m_event.peer->data) + sizeof(std::uint32_t), reinterpret_cast<std::uint8_t*>(&connect_id));
                     delete[] m_event.peer->data;
-                    m_event.peer->data = NULL;
-                
+                    m_event.peer->data = NULL;          
                     if (not m_server->GetAvatarPool()->Get(connect_id)) return;
 				    m_server->GetAvatarPool()->Remove(connect_id);
                     break;
@@ -54,6 +53,15 @@ void NetworkManager::Poll(std::deque<std::shared_ptr<NetworkManager>> m_network)
                 case ENET_EVENT_TYPE_RECEIVE:
                 {
                     std::shared_ptr<NetAvatar> m_avatar = { m_server->GetAvatarPool()->Get(m_event.peer->connectID) };
+					int message_type = *(int32_t*)m_avatar->GetPeer()->data;
+                    switch (message_type) {
+                    case NET_MESSAGE_GENERIC_TEXT:
+                    {
+                        break;
+                    }
+                    default:
+                        break;
+                    }
                     break;
                 }
             }
