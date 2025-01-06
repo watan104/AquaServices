@@ -131,6 +131,7 @@
   <ItemGroup>
     <ClCompile Include="AvatarPool.cpp" />
     <ClCompile Include="FileManager.cpp" />
+    <ClCompile Include="LoginHandler.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MiscUtils.cpp" />
     <ClCompile Include="NetAvatar.cpp" />
@@ -151,6 +152,9 @@
     <ClInclude Include="CommandContext.hpp" />
     <ClInclude Include="FileManager.hpp" />
     <ClInclude Include="FileSystem.hpp" />
+    <ClInclude Include="GrowIDLogon.hpp" />
+    <ClInclude Include="GuestLogon.hpp" />
+    <ClInclude Include="LoginHandler.hpp" />
     <ClInclude Include="Math.hpp" />
     <ClInclude Include="MiscUtils.hpp" />
     <ClInclude Include="NetAvatar.hpp" />
@@ -161,6 +165,7 @@
     <ClInclude Include="StreamInstance.hpp" />
     <ClInclude Include="StreamInstanceFile.hpp" />
     <ClInclude Include="TextScanner.hpp" />
+    <ClInclude Include="TokenLogon.hpp" />
     <ClInclude Include="Variant.hpp" />
     <ClInclude Include="WebServer.hpp" />
     <ClInclude Include="ENetWrapper.hpp" />

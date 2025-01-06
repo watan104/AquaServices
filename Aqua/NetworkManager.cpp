@@ -1,6 +1,7 @@
 #include "NetworkManager.hpp"
 #include "NetAvatar.hpp"
 #include "Packet.hpp"
+#include "LoginHandler.hpp"
 
 bool NetworkManager::Start()
 {
@@ -53,10 +54,17 @@ void NetworkManager::Poll(std::deque<std::shared_ptr<NetworkManager>> m_network)
                 case ENET_EVENT_TYPE_RECEIVE:
                 {
                     std::shared_ptr<NetAvatar> m_avatar = { m_server->GetAvatarPool()->Get(m_event.peer->connectID) };
-					int message_type = *(int32_t*)m_avatar->GetPeer()->data;
-                    switch (message_type) {
-                    case NET_MESSAGE_GENERIC_TEXT:
-                    {
+                    switch (*((int32_t*)m_event.packet->data)) {
+                    case NET_MESSAGE_GENERIC_TEXT: {
+                        std::fill_n(m_event.packet->data + m_event.packet->dataLength - 1, 1, 0);
+                        std::string_view get_text(reinterpret_cast<const char*>(m_event.packet->data) + 4);
+						LoginHandler::LoginHandler(get_text);
+                        if (get_text.starts_with("action|refresh_item_data")) {
+
+                        }
+                        if (get_text.starts_with("action|enter_game")) {
+
+						}
                         break;
                     }
                     default:

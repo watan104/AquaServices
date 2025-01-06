@@ -34,8 +34,23 @@
     <Filter Include="Src\ProtonSDK\Filesystem">
       <UniqueIdentifier>{00dba32f-8989-46a3-9923-2eaa52aa017c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Src\NetAvatar\Obj">
+    <Filter Include="Src\Event">
+      <UniqueIdentifier>{c6721b26-f7c5-4cda-bd16-5d609fa5d4ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\NetAvatar\Object">
       <UniqueIdentifier>{7c3d7510-d199-4369-a3f6-bc0d6db7f394}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\ProtonSDK\TextScanner">
+      <UniqueIdentifier>{500b20ad-0065-4ce6-b25f-00f660221264}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\ProtonSDK\MiscUtils">
+      <UniqueIdentifier>{fab0a79d-5de7-4c3e-a277-5c71d78278d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Event\Login">
+      <UniqueIdentifier>{ebff26a1-8b6c-4b6f-8cd5-1e529290a804}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Event\Login\Type">
+      <UniqueIdentifier>{e34d1a69-d0ad-4b6e-82b7-7452a4ad08fd}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -63,14 +78,17 @@
     <ClCompile Include="FileManager.cpp">
       <Filter>Src\ProtonSDK\Filesystem</Filter>
     </ClCompile>
+    <ClCompile Include="PeerPacket.cpp">
+      <Filter>Src\NetAvatar\Object</Filter>
+    </ClCompile>
     <ClCompile Include="TextScanner.cpp">
-      <Filter>Src\ProtonSDK</Filter>
+      <Filter>Src\ProtonSDK\TextScanner</Filter>
     </ClCompile>
     <ClCompile Include="MiscUtils.cpp">
-      <Filter>Src\ProtonSDK</Filter>
+      <Filter>Src\ProtonSDK\MiscUtils</Filter>
     </ClCompile>
-    <ClCompile Include="PeerPacket.cpp">
-      <Filter>Src\NetAvatar\Obj</Filter>
+    <ClCompile Include="LoginHandler.cpp">
+      <Filter>Src\Event\Login</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -122,23 +140,35 @@
     <ClInclude Include="FileManager.hpp">
       <Filter>Src\ProtonSDK\Filesystem</Filter>
     </ClInclude>
-    <ClInclude Include="TextScanner.hpp">
-      <Filter>Src\ProtonSDK</Filter>
-    </ClInclude>
-    <ClInclude Include="MiscUtils.hpp">
-      <Filter>Src\ProtonSDK</Filter>
-    </ClInclude>
     <ClInclude Include="ApplicationConfig.hpp">
       <Filter>Src</Filter>
     </ClInclude>
     <ClInclude Include="AvatarCharState.hpp">
-      <Filter>Src\NetAvatar\Obj</Filter>
+      <Filter>Src\NetAvatar\Object</Filter>
     </ClInclude>
     <ClInclude Include="PeerPacket.hpp">
-      <Filter>Src\NetAvatar\Obj</Filter>
+      <Filter>Src\NetAvatar\Object</Filter>
     </ClInclude>
     <ClInclude Include="Variant.hpp">
       <Filter>Src\ProtonSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="LoginHandler.hpp">
+      <Filter>Src\Event\Login</Filter>
+    </ClInclude>
+    <ClInclude Include="TextScanner.hpp">
+      <Filter>Src\ProtonSDK\TextScanner</Filter>
+    </ClInclude>
+    <ClInclude Include="MiscUtils.hpp">
+      <Filter>Src\ProtonSDK\MiscUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="GuestLogon.hpp">
+      <Filter>Src\Event\Login\Type</Filter>
+    </ClInclude>
+    <ClInclude Include="GrowIDLogon.hpp">
+      <Filter>Src\Event\Login\Type</Filter>
+    </ClInclude>
+    <ClInclude Include="TokenLogon.hpp">
+      <Filter>Src\Event\Login\Type</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
