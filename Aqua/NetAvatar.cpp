@@ -87,6 +87,11 @@ std::string NetAvatar::GetPlatformID()
 	return m_platform_id;
 }
 
+void NetAvatar::SetGameVersion(const float& version)
+{
+	m_game_version = version;
+}
+
 float NetAvatar::GetGameVersion()
 {
 	return m_game_version;

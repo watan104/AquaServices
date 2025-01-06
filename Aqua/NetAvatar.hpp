@@ -30,6 +30,7 @@ public:
 	_NODISCARD std::string GetIP();
 	_NODISCARD std::string GetWorld();
 	_NODISCARD std::string GetPlatformID();
+	void SetGameVersion(const float& version);
 	_NODISCARD float GetGameVersion();
 	_NODISCARD std::string GetCountry();
 	_NODISCARD std::string GetMAC();
@@ -52,7 +53,7 @@ private:
 	std::string 	m_world				{ "EXIT" };
 
 	std::string		m_platform_id		{ "" };
-	float			m_game_version		{ NULL };
+	float			m_game_version		{ 0 };
 	std::string		m_country			{ "us" }; //Default country is United States
 	std::string		m_mac				{ "" };
 	std::string		m_rid				{ "" };
