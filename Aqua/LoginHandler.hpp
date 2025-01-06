@@ -1,7 +1,5 @@
 #include <string>
-#include "ApplicationBase.hpp"
 #include "NetAvatar.hpp"
-#include "TextScanner.hpp"
 
 class LoginHandler {
 public:

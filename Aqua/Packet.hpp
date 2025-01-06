@@ -1,3 +1,7 @@
+#ifndef PACKET_HPP
+#define PACKET_HPP
+
+
 #include <stdint.h>
 #include <enet/enet.h>
 
@@ -213,3 +217,4 @@ struct GameUpdatePacket {
     uint8_t* m_data;
 };
 #pragma pack(pop)
+#endif // !PACKET_HPP

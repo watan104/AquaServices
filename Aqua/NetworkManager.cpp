@@ -57,8 +57,8 @@ void NetworkManager::Poll(std::deque<std::shared_ptr<NetworkManager>> m_network)
                     switch (*((int32_t*)m_event.packet->data)) {
                     case NET_MESSAGE_GENERIC_TEXT: {
                         std::fill_n(m_event.packet->data + m_event.packet->dataLength - 1, 1, 0);
-                        std::string_view get_text(reinterpret_cast<const char*>(m_event.packet->data) + 4);
-						LoginHandler::LoginHandler(get_text);
+                        std::string get_text(reinterpret_cast<const char*>(m_event.packet->data) + 4);
+						LoginHandler get_login{ m_avatar, get_text };
                         if (get_text.starts_with("action|refresh_item_data")) {
 
                         }
