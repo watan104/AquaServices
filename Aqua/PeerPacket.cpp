@@ -37,3 +37,20 @@ void PeerPacket::Send(int32_t type, const void* data, uintmax_t data_size)
     packet->data[data_size + 4] = 0;
     if (enet_peer_send(m_peer, 0, packet) not_eq 0) enet_packet_destroy(packet);
 }
+
+void PeerPacket::Variant(const variantlist_t& var, int32_t delay, int32_t net_id)
+{
+    std::size_t alloc = 1;
+    for (const auto& var : var.GetObjects())
+        alloc += var.GetMemAlloc() + 1;
+    const uint8_t* buffer = var.Serialize().get();
+    GameUpdatePacket* update_packet = new GameUpdatePacket[sizeof(GameUpdatePacket) + alloc];
+    update_packet->m_type = NET_GAME_PACKET_CALL_FUNCTION;
+    update_packet->m_net_id = net_id;
+    update_packet->m_flags |= NET_GAME_PACKET_FLAGS_EXTENDED;
+    update_packet->m_delay = delay;
+    update_packet->m_data_size = static_cast<uint32_t>(alloc);
+    std::copy_n(buffer, alloc, &update_packet->m_data);
+    this->Send(NET_MESSAGE_GAME_PACKET, update_packet, sizeof(GameUpdatePacket) + update_packet->m_data_size);
+	delete[] update_packet;
+}
