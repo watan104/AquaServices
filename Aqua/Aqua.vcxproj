@@ -130,6 +130,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AvatarPool.cpp" />
+    <ClCompile Include="Dialog.cpp" />
     <ClCompile Include="FileManager.cpp" />
     <ClCompile Include="LoginHandler.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -150,6 +151,7 @@
     <ClInclude Include="AvatarRoles.hpp" />
     <ClInclude Include="Command.hpp" />
     <ClInclude Include="CommandContext.hpp" />
+    <ClInclude Include="Dialog.hpp" />
     <ClInclude Include="FileManager.hpp" />
     <ClInclude Include="FileSystem.hpp" />
     <ClInclude Include="GrowIDLogon.cpp" />

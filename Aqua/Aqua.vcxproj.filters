@@ -52,6 +52,9 @@
     <Filter Include="Src\Event\Login\Type">
       <UniqueIdentifier>{e34d1a69-d0ad-4b6e-82b7-7452a4ad08fd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Src\ProtonSDK\MiscUtils\Builder">
+      <UniqueIdentifier>{aa7c09d3-4f10-4fe3-91d8-c37587e63cd3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -89,6 +92,9 @@
     </ClCompile>
     <ClCompile Include="LoginHandler.cpp">
       <Filter>Src\Event\Login</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialog.cpp">
+      <Filter>Src\ProtonSDK\MiscUtils\Builder</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -169,6 +175,9 @@
     </ClInclude>
     <ClInclude Include="TokenLogon.cpp">
       <Filter>Src\Event\Login\Type</Filter>
+    </ClInclude>
+    <ClInclude Include="Dialog.hpp">
+      <Filter>Src\ProtonSDK\MiscUtils\Builder</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
