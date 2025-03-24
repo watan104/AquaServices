@@ -1,6 +1,7 @@
 # Aqua Project
 
 This project is a multithreaded Growtopia Private Server application developed using modern C++
+Not finished! Check [Credits!](https://github.com/watan104/AquaServices/blob/master/Aqua/CREDITS.md)
 
 ## Features
 
